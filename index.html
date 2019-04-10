@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	
+          body{
+            overflow: hidden;
+           }
+ 
+    .header{
+        background-color: #f77878;
+           
+      }
+      input {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 65%;
+            height: 40px;
+            font-size: 20px;
+          font-weight: bolder;
+            color: blue;
+        }
+        input:focus {
+        border-color: green;
+        }
+        button{
+          width: 45%;
+          height: 45px;
+          border-radius: 10px;
+          border: 2px solid blue;
+          outline: none !important;
+          font-size: 20px;
+          background-color: blue;
+          color: white;
+          font-weight: bolder;
+
+        }
+        p{
+          color: green;
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        .overflowTest {
+            color: blue;
+       overflow-y: scroll;
+       height: 80px;
+}
+        .but{
+          width: 75%;
+        }
+        h4{
+          color: blue;
+        }
+       a:hover{
+          color: blue;
+          text-decoration: none;
+       }
+       a{
+          text-decoration: underline;
+
+          color: blue;
+          font-size: 25px;
+          font-weight: bolder;
+       }
+
+
+</style>
+
+
+<body>
+
+<div class="header" style=" height:155px;">
+        
+      </div>
+    <div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-4 header">
+      
+    </div>
+    <div class="col-lg-4 text-center header">
+      <div class="container bg-white">
+      <br>
+
+        <h4 class="text-center">Login</h4>
+      <br>
+          <br>
+         <input type="text" placeholder="Username" name="username" id="username">
+
+          <br>
+          <br>
+         
+         <input type="password" placeholder="password" name="password" id="password"><br><br><br>
+      
+       <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <br><br>
+            <div class="col-lg-8">
+               <button onclick="login()">Login</button>
+
+                <a href="register.html" class="ml-2">Register</a>
+            </div>
+            <div class="col-lg-2">
+            </div>
+
+            
+         </div> <br>
+       <br>
+       <hr class="border">
+      </div>
+    </div>
+    <div class="col-lg-4 header">
+      
+    </div>
+    
+  </div>
+
+</div>
+  <div class="header" style=" height:155px;">
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+</body>
+<script type="text/javascript">
+function login(){
+	var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var datas={
+    	username:username,
+    	password:password,
+    }
+
+ console.log(datas);
+ 
+
+
+ var data=JSON.parse(window.localStorage.getItem("user1"));
+  console.log(data)
+ if (username=='' && password=='') {
+ 	alert("Enter password & username")
+ }
+ else{
+ 	for (let i = 0; i < data.length; i++) {
+ 		
+ 	if (username==data[i].username) {
+ 		if (password==data[i].password) {
+            location.replace("home.html")
+
+ 		}
+ 		else{
+ 			alert("password incorrect")
+ 		}
+
+ 	}
+ 	else{
+ 		alert("username incorrect")
+ 	}
+}
+ }
+ }
+
+</script>
+</html>

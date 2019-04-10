@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		 body{
+            overflow: hidden;
+           }
+ 
+    .header{
+        background-color: #f77878;
+           
+      }
+      input {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 65%;
+            height: 40px;
+            font-size: 20px;
+          font-weight: bolder;
+            color: blue;
+        }
+        input:focus {
+        border-color: green;
+        }
+        button{
+          width: 45%;
+          height: 45px;
+          border-radius: 10px;
+          border: 2px solid blue;
+          outline: none !important;
+          font-size: 20px;
+          background-color: blue;
+          color: white;
+          font-weight: bolder;
+
+        }
+        p{
+          color: green;
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        .overflowTest {
+            color: blue;
+       overflow-y: scroll;
+       height: 80px;
+}
+        .but{
+          width: 75%;
+        }
+        h4{
+          color: blue;
+        }
+       a:hover{
+          color: blue;
+          text-decoration: none;
+       }
+       a{
+          text-decoration: underline;
+
+          color: blue;
+          font-size: 25px;
+          font-weight: bolder;
+       }
+	</style>
+
+</head>
+<body>
+	<div class="header" style=" height:155px;">
+        
+      </div>
+    <div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-4 header">
+      
+    </div>
+    <div class="col-lg-4 text-center header">
+    	 <br>
+
+      <br>
+          <br><br>
+
+      <div class="container bg-white">
+      <br>
+
+      <br>
+          <br>
+          
+<br>
+
+         
+      
+       <div class="row">
+            <div class="col-lg-2">
+            </div>
+            <br><br>
+            <div class="col-lg-8">
+            <h4 id="demo">Hi </h4>
+            </div>
+            <div class="col-lg-2">
+            </div>
+
+            
+         </div> <br>
+       <br>
+       <hr class="border">
+      </div>
+       <br>
+
+      <br>
+          <br>
+
+    </div>
+    <div class="col-lg-4 header">
+      
+    </div>
+    
+  </div>
+
+</div>
+  <div class="header" style=" height:155px;">
+    
+  </div>
+
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript">
+	 var user=JSON.parse(localStorage.getItem("user1"));
+	 console.log(user)
+	 for(let i=0; i< user.length; i++)
+	 {
+
+	document.getElementById('demo').innerHTML = "Hi "+ user[i].username + "." + " what doing?";
+    
+    }
+</script>
+</html>
